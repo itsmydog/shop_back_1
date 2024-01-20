@@ -1,0 +1,20 @@
+spring:
+  aop:
+      proxy-target-class: false
+  jpa:
+    hibernate:
+    #create-drop
+      ddl-auto: validate
+    show-sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5433/postgres
+    username: admin
+    password: pass
+  flyway:
+    baseline-on-migrate: true
+  main:
+    allow-circular-references: true
+
+logging:
+  level:
+    org.springframework.security: trace
